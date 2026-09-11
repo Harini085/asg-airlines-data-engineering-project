@@ -1,3 +1,10 @@
+## Power BI Dashboard Demo
+
+A demonstration video of the Power BI dashboard is available here:
+
+[Power BI Dashboard Demo](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)
+
+
 # ASG Airlines Data Engineering Project
 
 An end-to-end Data Engineering and Analytics project for the Airlines use case. The project covers raw data ingestion, data profiling, data cleaning, transformation, data validation, analytics-ready dataset generation, Power BI reporting, and project documentation.
@@ -285,11 +292,9 @@ Open the `.pbix` file using Microsoft Power BI Desktop.
 
 A demonstration video of the Power BI dashboard is available here:
 
-[Power BI Dashboard Demo](https://drive.google.com/)
+[Power BI Dashboard Demo](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)
 
-Replace the above Google Drive link with the actual shared demo-video link before submitting the project.
 
-The Google Drive sharing permission should be set to allow the evaluator to view the video without requesting access.
 
 ## Project Documentation
 
