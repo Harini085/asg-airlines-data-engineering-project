@@ -2,7 +2,7 @@
 
  **[Watch the Power BI Dashboard Demonstration](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)**
 
-The video demonstrates the Power BI dashboard, key visualizations, KPIs, filters, and analytical insights developed from the processed airline dataset.
+
 
 
 #  Airlines Data Engineering Project
