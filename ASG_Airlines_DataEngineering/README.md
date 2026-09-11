@@ -1,95 +1,104 @@
 ## Power BI Dashboard Demo
 
- **[Watch the Power BI Dashboard Demonstration](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)**
+A demonstration video of the Power BI dashboard is available here:
+
+[Power BI Dashboard Demo](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)
 
 
+# ASG Airlines Data Engineering Project
 
+An end-to-end Data Engineering and Analytics project for the Airlines use case. The project covers raw data ingestion, data profiling, data cleaning, transformation, data validation, analytics-ready dataset generation, Power BI reporting, and project documentation.
 
-#  Airlines Data Engineering Project
+## Project Overview
 
-An end-to-end **Data Engineering and Analytics project** built for the Airlines use case. The project covers raw data ingestion, data profiling, data cleaning and transformation, generation of an analytics-ready dataset, and business intelligence visualization using Power BI.
+The objective of this project is to transform raw airline data into a clean, structured, validated, and analytics-ready dataset for business analysis and reporting.
 
----
-
-##  Project Overview
-
-The objective of this project is to transform raw airline data into a clean, structured, and analytics-ready dataset that can be used to derive meaningful business insights.
-
-The project follows a simple end-to-end data engineering workflow:
-
-**Raw Data → Data Profiling → Data Cleaning & Transformation → Processed Dataset → Power BI Dashboard**
-
-The solution is implemented using Python and Jupyter Notebook for data processing and Power BI for analytics and visualization.
-
----
-
-##  Objectives
-
-* Understand and profile the raw airline dataset.
-* Identify missing values, duplicates, inconsistencies, and data-quality issues.
-* Clean and transform the source data.
-* Standardize data types and values.
-* Generate an analytics-ready dataset.
-* Perform data-quality validation.
-* Build a Power BI dashboard for business analysis.
-* Maintain project documentation covering the architecture, data flow, and data model.
-
----
-
-##  Project Architecture
+The project follows the workflow:
 
 ```text
-                    ┌──────────────────────┐
-                    │     Raw Excel Data   │
-                    │      Airlines.xlsx   │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Data Profiling     │
-                    │  Quality Assessment  │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Data Cleaning & ETL  │
-                    │   Python / Pandas    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Processed Dataset    │
-                    │ Analytics-Ready CSV  │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │      Power BI        │
-                    │ Dashboard & Insights │
-                    └──────────────────────┘
+Raw Data
+   |
+   v
+Data Profiling
+   |
+   v
+Data Cleaning
+   |
+   v
+Data Transformation
+   |
+   v
+Data Validation
+   |
+   v
+Analytics-Ready Dataset
+   |
+   v
+Power BI Dashboard
 ```
 
----
+The data processing pipeline is implemented using Python and Jupyter Notebook, while Microsoft Power BI is used for visualization and reporting.
 
-##  Technology Stack
+## Objectives
 
-| Technology           | Purpose                                      |
-| -------------------- | -------------------------------------------- |
-| **Python**           | Data processing and transformation           |
-| **Pandas**           | Data cleaning and manipulation               |
-| **Jupyter Notebook** | ETL pipeline development and execution       |
-| **Excel**            | Raw source data                              |
-| **CSV**              | Processed analytics-ready dataset            |
-| **Power BI**         | Data visualization and dashboard development |
-| **Git & GitHub**     | Version control and project management       |
+* Ingest the raw airline dataset.
+* Profile the source data and understand its structure.
+* Identify missing values, duplicates, inconsistencies, and data-quality issues.
+* Clean and standardize the source data.
+* Transform the data into an analytics-ready format.
+* Perform data-quality and validation checks.
+* Create derived analytical fields.
+* Generate the final processed CSV dataset.
+* Develop a Power BI dashboard.
+* Provide complete technical documentation.
+* Maintain the project using Git and GitHub.
 
----
+## Technology Stack
 
-##  Project Structure
+| Technology         | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| Python             | Data processing and transformation       |
+| Pandas             | Data cleaning and manipulation           |
+| NumPy              | Numerical and data-processing operations |
+| Jupyter Notebook   | ETL pipeline development and execution   |
+| Microsoft Excel    | Raw source data                          |
+| CSV                | Processed analytics-ready dataset        |
+| Microsoft Power BI | Dashboard and data visualization         |
+| Git                | Version control                          |
+| GitHub             | Source-code and project management       |
+
+## Project Architecture
+
+```text
+                     Raw Excel Data
+                           |
+                           v
+                  Data Profiling
+                           |
+                           v
+                Data Cleaning & ETL
+                           |
+                           v
+                Data Transformation
+                           |
+                           v
+                  Data Validation
+                           |
+                           v
+             Analytics-Ready CSV Dataset
+                           |
+                           v
+                    Power BI Report
+                           |
+                           v
+                   Business Insights
+```
+
+## Project Structure
 
 ```text
 ASG_Airlines_DataEngineering/
-│
+|
 ├── data/
 │   ├── raw/
 │   │   └── Airlines.xlsx
@@ -109,61 +118,52 @@ ASG_Airlines_DataEngineering/
 └── README.md
 ```
 
----
+## Data Source
 
-##  Data Source
-
-The raw airline data is provided in Excel format.
+The raw airline dataset is stored in:
 
 ```text
 data/raw/Airlines.xlsx
 ```
 
-The raw dataset is treated as the source layer and is not directly used for dashboard reporting.
+The raw dataset is preserved separately from the processed dataset to maintain a clear separation between source data and analytics-ready data.
 
----
+## Data Profiling
 
-##  Data Profiling
-
-Before transformation, the source data is profiled to understand its structure and data quality.
+The source dataset is profiled before transformation to understand its structure and identify potential data-quality issues.
 
 The profiling process includes:
 
 * Dataset dimensions
-* Column names and data types
+* Column names
+* Data types
 * Missing-value analysis
 * Duplicate-record analysis
 * Unique-value analysis
 * Cardinality checks
+* Numerical statistics
+* Categorical analysis
+* Date and time validation
 * Invalid or inconsistent values
-* Numerical-column statistics
-* Categorical-column analysis
-* Date-column validation
 * Potential outlier identification
-* Data-quality observations
 
-The profiling stage helps identify issues before the transformation pipeline is executed.
+## Data Engineering Pipeline
 
----
-
-## ⚙️ Data Engineering Pipeline
-
-The ETL pipeline is implemented in:
+The complete ETL pipeline is implemented in:
 
 ```text
 pipeline/Airlines_Pipeline.ipynb
 ```
 
-### Pipeline Flow
-
 ### 1. Extract
 
-The raw Excel file is loaded into Python using Pandas.
+The raw Excel dataset is loaded into Python using Pandas.
 
 ```text
 Airlines.xlsx
-       ↓
-    Pandas
+     |
+     v
+Pandas DataFrame
 ```
 
 ### 2. Profile
@@ -177,56 +177,94 @@ The dataset is analyzed to identify:
 * Inconsistent categorical values
 * Data-quality issues
 
-### 3. Transform
+### 3. Clean
 
-The pipeline performs the required data transformations, including:
+The pipeline applies the required data-cleaning operations, including:
 
 * Handling missing values
-* Removing duplicate records
+* Removing or managing duplicates
 * Correcting data types
-* Standardizing categorical values
+* Standardizing values
 * Cleaning inconsistent records
-* Formatting date-related fields
-* Validating transformed data
+* Processing date and time fields
 
-### 4. Validate
+### 4. Transform
 
-The transformed dataset is checked to ensure:
+The cleaned dataset is transformed into an analytics-ready structure.
+
+The transformation process includes derived fields such as:
+
+* Flight date
+* Route
+* Duration in minutes
+* Duration in hours
+* Overnight flight indicator
+* Duration anomaly indicator
+
+### 5. Validate
+
+The transformed dataset is validated to ensure:
 
 * Required columns are available.
 * Data types are appropriate.
 * Duplicate records are handled.
-* Missing values are addressed according to the transformation rules.
+* Missing values are addressed.
 * Invalid values are identified or corrected.
+* Derived fields are generated correctly.
 * The final dataset is suitable for analytics.
 
-### 5. Load
+### 6. Load
 
-The final analytics-ready dataset is written to:
-
-```text
-data/processed/flights_analytics_ready.csv
-```
-
-This processed dataset is then used as the analytical source for Power BI.
-
----
-
-##  Analytics-Ready Dataset
-
-The processed output is available at:
+The final processed dataset is generated at:
 
 ```text
 data/processed/flights_analytics_ready.csv
 ```
 
-The purpose of this layer is to provide a clean and consistent dataset for downstream analytics and reporting.
+This dataset is used as the analytical source for Power BI.
 
-Instead of connecting Power BI directly to the raw source, the dashboard uses the transformed analytics-ready data.
+## Analytics-Ready Dataset
 
----
+The processed dataset is available at:
 
-## 📈 Power BI Dashboard
+```text
+data/processed/flights_analytics_ready.csv
+```
+
+The dataset contains analytics-ready fields including:
+
+```text
+flight_id
+airline
+source
+destination
+route
+departure_time
+arrival_time
+flight_date
+duration_minutes
+duration_hours
+overnight_flag
+duration_anomaly_flag
+```
+
+The processed dataset provides a clean and structured source for downstream analytics and visualization.
+
+## Data Quality and Validation
+
+The project includes data-quality checks covering:
+
+| Check                   | Purpose                                  |
+| ----------------------- | ---------------------------------------- |
+| Missing Values          | Identify incomplete records              |
+| Duplicate Records       | Prevent duplicate analytical data        |
+| Data Types              | Ensure appropriate column types          |
+| Categorical Consistency | Standardize categorical values           |
+| Date Validation         | Verify date and time fields              |
+| Numerical Validation    | Identify invalid numerical values        |
+| Output Validation       | Verify the final analytics-ready dataset |
+
+## Power BI Dashboard
 
 The Power BI report is available at:
 
@@ -234,124 +272,132 @@ The Power BI report is available at:
 powerbi/powerbi.pbix
 ```
 
-The dashboard provides an analytical view of the airline data and enables users to explore relevant business metrics and trends.
+The dashboard is designed to provide interactive analysis of the processed airline data.
 
-Typical analytical areas include:
+The analytical areas include:
 
-* Flight performance
+* Flight analysis
 * Airline-level analysis
 * Route analysis
-* Passenger-related metrics
-* Revenue or financial metrics where available
-* Operational trends
+* Source and destination analysis
+* Flight duration analysis
+* Overnight flight analysis
+* Duration anomaly analysis
 * Time-based analysis
-* Comparative business performance
+* Interactive filtering and exploration
 
-> Open the `.pbix` file using Microsoft Power BI Desktop.
+Open the `.pbix` file using Microsoft Power BI Desktop.
 
----
+## Power BI Dashboard Demo
 
-## 📚 Project Documentation
+A demonstration video of the Power BI dashboard is available here:
 
-Detailed project documentation is available in:
+[Power BI Dashboard Demo](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)
+
+
+
+## Project Documentation
+
+The detailed project documentation is available at:
 
 ```text
 documentation/ASG_Airlines_Project_Documentation.docx
 ```
 
-The documentation contains the project's technical and functional details, including:
+The documentation covers:
 
 * Project overview
 * Requirements
 * Architecture
 * Data flow
 * Data processing approach
+* Data transformation
+* Data validation
 * Data model
-* Transformation logic
 * Analytics approach
-* Dashboard information
+* Power BI dashboard
+* Project implementation
 
----
-
-##  End-to-End Workflow
+## End-to-End Workflow
 
 ```text
-                    SOURCE
-                      │
-                      ▼
+                 SOURCE
+                   |
+                   v
              Airlines.xlsx
-                      │
-                      ▼
-               DATA PROFILING
-                      │
-                      ▼
+                   |
+                   v
+            DATA PROFILING
+                   |
+                   v
              DATA CLEANING
-                      │
-                      ▼
-            DATA TRANSFORMATION
-                      │
-                      ▼
-             DATA VALIDATION
-                      │
-                      ▼
-        flights_analytics_ready.csv
-                      │
-                      ▼
-                POWER BI
-                      │
-                      ▼
-             BUSINESS INSIGHTS
+                   |
+                   v
+          DATA TRANSFORMATION
+                   |
+                   v
+           DATA VALIDATION
+                   |
+                   v
+     flights_analytics_ready.csv
+                   |
+                   v
+               POWER BI
+                   |
+                   v
+           BUSINESS INSIGHTS
 ```
 
----
-
-##  How to Run the Project
+## How to Run the Project
 
 ### Prerequisites
 
 Install the following:
 
 * Python 3.x
-* Jupyter Notebook / JupyterLab
+* Jupyter Notebook or JupyterLab
 * Microsoft Power BI Desktop
+* Git
 
 ### Python Libraries
 
 Install the required Python packages:
 
 ```bash
-pip install pandas openpyxl jupyter
+pip install pandas numpy openpyxl jupyter
 ```
 
----
+### Step 1: Clone the Repository
 
-### Step 1 — Clone the Repository
+Use the actual repository URL:
 
 ```bash
-git clone https://github.com/Harini085/asg-airlines-data-engineering-project/tree/main/ASG_Airlines_DataEngineering
+git clone https://github.com/Harini085/asg-airlines-data-engineering-project.git
 ```
 
-Navigate into the project directory:
+Navigate to the repository:
+
+```bash
+cd asg-airlines-data-engineering-project
+```
+
+Then navigate to the project directory:
 
 ```bash
 cd ASG_Airlines_DataEngineering
 ```
 
----
+### Step 2: Verify the Raw Data
 
-### Step 2 — Verify the Raw Data
-
-Ensure the source file is available at:
+Ensure the source file exists at:
 
 ```text
 data/raw/Airlines.xlsx
 ```
 
----
+### Step 3: Start Jupyter Notebook
 
-### Step 3 — Run the ETL Pipeline
-
-Launch Jupyter Notebook:
+Run:
 
 ```bash
 jupyter notebook
@@ -363,21 +409,33 @@ Open:
 pipeline/Airlines_Pipeline.ipynb
 ```
 
+### Step 4: Run the ETL Pipeline
+
 Run the notebook cells from top to bottom.
 
----
+The pipeline reads:
 
-### Step 4 — Verify the Output
+```text
+data/raw/Airlines.xlsx
+```
 
-After successful execution, verify that the processed dataset is available at:
+and generates:
 
 ```text
 data/processed/flights_analytics_ready.csv
 ```
 
----
+### Step 5: Verify the Output
 
-### Step 5 — Open the Power BI Dashboard
+After successful execution, verify that:
+
+```text
+data/processed/flights_analytics_ready.csv
+```
+
+has been generated successfully.
+
+### Step 6: Open the Power BI Dashboard
 
 Open:
 
@@ -385,31 +443,13 @@ Open:
 powerbi/powerbi.pbix
 ```
 
-in **Microsoft Power BI Desktop**.
+using Microsoft Power BI Desktop.
 
 Refresh the dataset if required.
 
----
+## Data Layers
 
-##  Data Quality Checks
-
-The pipeline performs data-quality checks to improve the reliability of the analytical dataset.
-
-| Check                   | Purpose                              |
-| ----------------------- | ------------------------------------ |
-| Missing Values          | Identify incomplete records          |
-| Duplicate Records       | Prevent duplicate analytical data    |
-| Data Types              | Ensure columns use appropriate types |
-| Categorical Consistency | Standardize values                   |
-| Date Validation         | Ensure valid date representations    |
-| Numerical Validation    | Identify invalid numerical values    |
-| Output Validation       | Verify the final dataset             |
-
----
-
-##  Data Layers
-
-The project follows a simple layered data approach:
+The project follows a simple layered data architecture.
 
 ### Raw Layer
 
@@ -417,7 +457,7 @@ The project follows a simple layered data approach:
 data/raw/
 ```
 
-Contains the original source data without transformation.
+Contains the original source dataset.
 
 ### Processed Layer
 
@@ -425,7 +465,7 @@ Contains the original source data without transformation.
 data/processed/
 ```
 
-Contains cleaned and transformed data prepared for analytics.
+Contains the cleaned and transformed analytics-ready dataset.
 
 ### Presentation Layer
 
@@ -435,29 +475,26 @@ powerbi/
 
 Contains the Power BI report used for visualization and business analysis.
 
----
+## Data Handling
 
-##  Data Handling
-
-The raw source data is preserved separately from the processed output.
-
-This provides a clear separation between:
+The project maintains a clear separation between source data, transformation, analytics data, and reporting.
 
 ```text
 Source Data
-     ↓
-Transformation
-     ↓
-Analytics Data
-     ↓
-Reporting
+     |
+     v
+Data Transformation
+     |
+     v
+Analytics-Ready Data
+     |
+     v
+Power BI Reporting
 ```
 
-This approach makes the pipeline easier to understand, validate, and maintain.
+This approach improves traceability, maintainability, and reproducibility of the data pipeline.
 
----
-
-##  Key Deliverables
+## Key Deliverables
 
 | Deliverable           | Location                                                |
 | --------------------- | ------------------------------------------------------- |
@@ -466,22 +503,34 @@ This approach makes the pipeline easier to understand, validate, and maintain.
 | Processed Dataset     | `data/processed/flights_analytics_ready.csv`            |
 | Power BI Dashboard    | `powerbi/powerbi.pbix`                                  |
 | Project Documentation | `documentation/ASG_Airlines_Project_Documentation.docx` |
+| Dashboard Demo        | Google Drive link provided above                        |
 
----
-
-##  Key Outcomes
+## Project Outcomes
 
 The project demonstrates an end-to-end data engineering workflow by:
 
-* Converting raw airline data into structured analytical data.
-* Applying data-quality and transformation processes.
+* Processing raw airline data.
+* Applying data-cleaning and transformation operations.
+* Performing data-quality validation.
 * Producing a reusable analytics-ready dataset.
-* Connecting processed data to a BI reporting layer.
-* Providing a documented and reproducible data pipeline.
+* Creating derived analytical fields.
+* Connecting processed data to Power BI.
+* Providing interactive business analysis.
+* Maintaining technical project documentation.
+* Providing a reproducible project structure.
 
----
+## Repository
+
+The complete project is available on GitHub:
+
+https://github.com/Harini085/asg-airlines-data-engineering-project
 
 ## Author
 
 **Harini S**
-M.sc Data Science
+
+M.Sc. Data Science
+
+## Project Purpose
+
+This project was developed for the ASG Airlines Data Engineering use case and demonstrates practical implementation of data engineering, data quality, analytics-ready data preparation, and business intelligence reporting.
