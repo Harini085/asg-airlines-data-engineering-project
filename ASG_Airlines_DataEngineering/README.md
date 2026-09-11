@@ -1,3 +1,10 @@
+## Power BI Dashboard Demo
+
+ **[Watch the Power BI Dashboard Demonstration](https://drive.google.com/file/d/1vf4v3xe1LHsZeLI-izg4uADEcfBaVo4n/view?usp=sharing)**
+
+The video demonstrates the Power BI dashboard, key visualizations, KPIs, filters, and analytical insights developed from the processed airline dataset.
+
+
 #  Airlines Data Engineering Project
 
 An end-to-end **Data Engineering and Analytics project** built for the Airlines use case. The project covers raw data ingestion, data profiling, data cleaning and transformation, generation of an analytics-ready dataset, and business intelligence visualization using Power BI.
