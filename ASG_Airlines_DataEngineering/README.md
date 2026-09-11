@@ -328,7 +328,7 @@ pip install pandas openpyxl jupyter
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Harini085/asg-airlines-data-engineering-project/tree/main/ASG_Airlines_DataEngineering
 ```
 
 Navigate into the project directory:
